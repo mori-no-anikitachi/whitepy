@@ -6,7 +6,14 @@ class IO(object):
         self.stack = stack
 
     def i_chr(self, heap):
-        self.stack.push(input())
+        # read a line (input strips newline); push the character code (int)
+        val = input()
+        if val == '':
+            # EOF or empty - push 0
+            self.stack.push(0)
+        else:
+            # push the code of the first character
+            self.stack.push(ord(val[0]))
         heap.set()
 
     def i_int(self, heap):

@@ -7,12 +7,12 @@ import click
 
 
 @click.command()
-@click.option('--debug/--no-debug', default=False, help='Enable Debug')
-@click.argument('filename')
+@click.option("--debug/--no-debug", default=False, help="Enable Debug")
+@click.argument("filename")
 def whitepycli(filename, debug):
     """Whitespace Interpreter"""
     assert os.path.isfile(filename)
-    with open(filename, 'r') as f:
+    with open(filename, "r") as f:
         lines = f.read()
         item = lexer.Lexer(line=lines, debug=debug)
         item.get_all_tokens()
@@ -20,5 +20,5 @@ def whitepycli(filename, debug):
         p.parse()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     whitepycli()
