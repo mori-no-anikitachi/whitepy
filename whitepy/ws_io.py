@@ -8,7 +8,7 @@ class IO(object):
     def i_chr(self, heap):
         # read a line (input strips newline); push the character code (int)
         val = input()
-        if val == '':
+        if val == "":
             # EOF or empty - push 0
             self.stack.push(0)
         else:
@@ -28,8 +28,8 @@ class IO(object):
 
     def o_chr(self):
         char = chr(self.stack.pop())
-        sys.stdout.buffer.write(char.encode('utf-8'))
+        sys.stdout.buffer.write(char.encode("utf-8"))
 
     def o_int(self):
         integer = self.stack.pop()
-        sys.stdout.buffer.write(str(integer).encode('utf-8'))
+        sys.stdout.buffer.write(str(integer).encode("utf-8"))
