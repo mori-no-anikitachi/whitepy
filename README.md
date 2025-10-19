@@ -28,7 +28,7 @@ Hello, World!
 ##### From Github
 
 ```shell
-$ git clone https://github.com/yasn77/whitepy && cd whitepy
+$ git clone https://github.com/mori-no-anikitachi/whitepy && cd whitepy
 $ pip install -r requirements.txt
 $ ./whitepycli --help
 Usage: whitepycli [OPTIONS] FILENAME
